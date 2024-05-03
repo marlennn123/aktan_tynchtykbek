@@ -44,3 +44,10 @@ class UserAdmin(BaseUserAdmin):
             },
         ),
     ]
+
+admin.site.register(Hotel)
+admin.site.register(Comment)
+admin.site.register(HotelImage)
+admin.site.register(Room)
+admin.site.register(ImageRoom)
+admin.site.register(Booking)
