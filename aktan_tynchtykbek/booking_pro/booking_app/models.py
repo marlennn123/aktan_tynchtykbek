@@ -52,7 +52,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'user'
         verbose_name_plural = 'users'
 
-
 class Hotel(models.Model):
     name = models.CharField(max_length=16)
     description = models.TextField()
@@ -74,15 +73,13 @@ class Comment(models.Model):
     def __str__(self) -> str:
         return f'{self.user}'
 
-
 class HotelImage(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='hotel_image')
 
-
 class Room(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
-    room_number = models.SmallIntegerField(unique=True)
+    room_number = models.SmallIntegerField()
     capacity = models.SmallIntegerField(default=1)
     price_per_night = models.PositiveIntegerField()
 
