@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-AUTH_USER_MODEL = 'booking_app.User'
+# AUTH_USER_MODEL = 'booking_app.User'
 
 ROOT_URLCONF = 'booking_pro.urls'
 
