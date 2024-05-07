@@ -21,6 +21,7 @@ class UserAdmin(BaseUserAdmin):
                 "fields": [
                     "first_name",
                     "last_name",
+                    "phone_number",
                     "is_active",
                     "is_staff",
                 ],
